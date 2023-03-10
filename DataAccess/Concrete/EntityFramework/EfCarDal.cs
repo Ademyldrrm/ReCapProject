@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework
 {
@@ -24,12 +25,25 @@ namespace DataAccess.Concrete.EntityFramework
 
         public void Add(Car entity)
         {
-            throw new NotImplementedException();
+            using(ReCapContext  reCapContext= new ReCapContext())
+            {
+                var addedEntity = reCapContext.Entry(entity);
+
+                addedEntity.State = EntityState.Added;
+                reCapContext.SaveChanges();
+            }
+
         }
 
         public void Update(Car entity)
         {
-            throw new NotImplementedException();
+            using (ReCapContext reCapContext = new ReCapContext())
+            {
+                var addedEntity = reCapContext.Entry(entity);
+
+                addedEntity.State = EntityState.Modified;
+                reCapContext.SaveChanges();
+            }
         }
 
         public void Delete(Car entity)
