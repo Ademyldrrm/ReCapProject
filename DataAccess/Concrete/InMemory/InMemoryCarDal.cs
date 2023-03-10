@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstract;
@@ -17,10 +18,10 @@ namespace DataAccess.Concrete.InMemory
         {
             _cars= new List<Car>()
             {
-                new Car{CarId = 1,BrandId = 1,CarName = "Ford",ColorId = 2,ModelYear = "2020",DailyPrice = "1500",Description = "Güzel Beyaz Araba"},
-                new Car{CarId = 1,BrandId = 1,CarName = "Toyota",ColorId = 2,ModelYear = "2022",DailyPrice = "2500",Description = "Güzel Kırmızı Araba"},
-                new Car{CarId = 1,BrandId = 1,CarName = "Hyundai",ColorId = 2,ModelYear = "2023",DailyPrice = "3500",Description = "Güzel Sarı Araba"},
-                new Car{CarId = 1,BrandId = 1,CarName = "Volvo",ColorId = 2,ModelYear = "2024",DailyPrice = "4500",Description = "Güzel Mavi Araba"}
+                //new Car{CarId = 1,BrandId = 1,CarName = "Ford",ColorId = 2,ModelYear = "2020",DailyPrice = "1500",Description = "Güzel Beyaz Araba"},
+                //new Car{CarId = 1,BrandId = 1,CarName = "Toyota",ColorId = 2,ModelYear = "2022",DailyPrice = "2500",Description = "Güzel Kırmızı Araba"},
+                //new Car{CarId = 1,BrandId = 1,CarName = "Hyundai",ColorId = 2,ModelYear = "2023",DailyPrice = "3500",Description = "Güzel Sarı Araba"},
+                //new Car{CarId = 1,BrandId = 1,CarName = "Volvo",ColorId = 2,ModelYear = "2024",DailyPrice = "4500",Description = "Güzel Mavi Araba"}
             };
         }
 
@@ -37,9 +38,19 @@ namespace DataAccess.Concrete.InMemory
             _cars.Remove(carToDelete);
         }
 
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAll()
         {
             return _cars;
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Car> GetById(int carId)
@@ -53,7 +64,7 @@ namespace DataAccess.Concrete.InMemory
 
             carToUpdate.CarId = car.CarId;
             carToUpdate.BrandId = car.BrandId;
-            carToUpdate.CarName= car.CarName;
+            //carToUpdate.CarName= car.CarName;
             carToUpdate.ColorId= car.ColorId;
             carToUpdate.DailyPrice= car.DailyPrice;
             carToUpdate.Description= car.Description;
