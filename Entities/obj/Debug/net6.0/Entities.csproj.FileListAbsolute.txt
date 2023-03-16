@@ -22,3 +22,6 @@ C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\obj\Debug\net6.0\Entiti
 C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\obj\Debug\net6.0\Entities.pdb
 C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\obj\Debug\net6.0\ref\Entities.dll
+C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\bin\Debug\net6.0\Core.dll
+C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\bin\Debug\net6.0\Core.pdb
+C:\Users\AdemYildirim\source\repos\ReCapProject\Entities\obj\Debug\net6.0\Entities.csproj.CopyComplete
