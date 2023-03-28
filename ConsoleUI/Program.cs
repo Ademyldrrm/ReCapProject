@@ -10,19 +10,28 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
 
-            //CarManager carManager=new CarManager(new EfCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
 
-            // //carManager.Add(new Car{BrandId = 2,ColorId = 3,ModelYear = "2022",DailyPrice ="15.00",Description = "çok güzel araba"});
-            // carManager.Update(new Car{ CarId = 1,BrandId = 2, ColorId = 3, ModelYear = "2022", DailyPrice = "20.00", Description = "Harika Araba" });
-            //foreach (var car in carManager.GetAll())
-            //{
-            //    Console.WriteLine(car.Description);
-            //}
-            BrandManager brandManager = new BrandManager(new EfBrandDal());
-            foreach (var brand in brandManager.GetAll())
+           // carManager.Add(new Car { BrandId = 3,CarName = "Corolla",ColorId = 3, ModelYear = "2023", DailyPrice = "45.00", Description = "çok güzel araba" });
+           ///* carManager.Update(new Car { CarId = 1, BrandId = 2, ColorId = 3, ModelYear = "2022", DailyPrice = "20.00", Description = "Harika Araba" });
+            foreach (var car in carManager.CarDetails())
             {
-                Console.WriteLine(brand.BrandName);
+                Console.WriteLine(car.BrandName+" "+car.DailyPrice);
             }
+            //BrandManager brandManager = new BrandManager(new EfBrandDal());
+            ////brandManager.Add(new Brand { BrandName = "Audi" });
+            ////brandManager.Delete(new Brand{BrandId = 4});
+            //foreach (var brand in brandManager.GetAll())
+            //{
+            //    Console.WriteLine(brand.BrandName);
+            //}
+
+            //ColorManager colorManager = new ColorManager(new EfColorDal());
+            //colorManager.Add(new Color { ColorName = "Mor" });
+            //foreach (var color in colorManager.GetAll())
+            //{
+            //    Console.WriteLine(color.ColorName);
+            //}
 
 
 

@@ -50,7 +50,12 @@ namespace Core.DataAccess.EntiyFramework
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            using (TContext reCapContext =new TContext())
+            {
+                var addedEntity=reCapContext.Entry(entity);
+                addedEntity.State = EntityState.Deleted;
+                reCapContext.SaveChanges();
+            }
         }
     }
 }

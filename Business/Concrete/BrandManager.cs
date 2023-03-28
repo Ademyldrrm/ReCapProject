@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Abstract;
 using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 
 namespace Business.Concrete
@@ -18,14 +20,30 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
+        public void Add(Brand brand)
+        {
+            _brandDal.Add(brand);
+        
+        }
+
+        public void Delete(Brand brand)
+        {
+            _brandDal.Delete(brand);
+        }
+
         public List<Brand> GetAll()
         {
             return _brandDal.GetAll();
         }
 
-        public Brand GetById(int id)
+        public List<Brand> GetById(int id)
         {
-            return _brandDal.Get(b => b.BrandId == id);
+           return _brandDal.GetAll(b => b.BrandId == id);
+        }
+
+        public void Update(Brand brand)
+        {
+          _brandDal.Update(brand);
         }
     }
 }
