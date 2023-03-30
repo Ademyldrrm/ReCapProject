@@ -17,5 +17,6 @@ namespace Entities.Concrete
         public string? ModelYear { get; set; }
         public string? DailyPrice { get; set; }
         public string? Description { get; set; }
+        public string? BrandName { get; set; }
     }
 }
