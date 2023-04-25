@@ -49,7 +49,7 @@ namespace Business.Concrete
 
         public void Delete(Car car)
         {
-            throw new NotImplementedException();
+            
         }
 
 

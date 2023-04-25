@@ -9,6 +9,7 @@ namespace Business.Contants
     public static class Messages
     {
         public static string CarAdded = "Araba eklendi";
+        public static string CarNotAdded = "Araba Eklenemedi Şuan da Kullanım Halinde";
         public static string CarNameInvalid = "Araba İsmi Yetersiz";
         public static string MaintenanceTime = "Bakım Zamanı";
         public static string CarListed = "Araçlar Listeldni";
