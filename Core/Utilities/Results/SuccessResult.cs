@@ -16,6 +16,8 @@ namespace Core.Utilities.Results
         public SuccessResult() : base(true)
         {
 
+
+
         }
     }
 }

@@ -47,9 +47,10 @@ namespace Business.Concrete
             return new SuccesDataResult<List<CarDetailDto>>(_carDal.CarDetails(),Messages.CarListed);
         }
 
-        public void Delete(Car car)
+        public IResult Delete(Car car)
         {
-            
+            return new SuccessResult(Messages.CarAdded);
+
         }
 
 
@@ -67,7 +68,7 @@ namespace Business.Concrete
 
         public IDataResult<Car> GetById(int carId)
         {
-            throw new NotImplementedException();
+            return new SuccesDataResult<Car>(_carDal.Get(c=>c.CarId==carId));
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
@@ -85,10 +86,11 @@ namespace Business.Concrete
 
 
 
-
-        public void Update(Car car)
+        public IResult Update(Car car)
         {
-             _carDal.Update(car);
+          
+            _carDal.Update(car);
+            return new SuccessResult(Messages.CarAdded);
         }
 
 
