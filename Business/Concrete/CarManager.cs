@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Contants;
+using Business.ValidationRules.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 using Microsoft.VisualBasic;
 
 namespace Business.Concrete
@@ -23,13 +26,16 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-
+        //1:42 de kaldım
         public IResult Add(Car car)
         {
-            if (car.CarName.Length<2)
-            {
-                return new ErrorResult(Messages.CarNameInvalid);
+            var context =  new ValidationContext<Car>(car);
+            CarValidator carValidator=new CarValidator();
+            var result=carValidator.Validate(context);
 
+            if (!result.IsValid)
+            {
+                throw new FluentValidation.ValidationException(result.Errors);
             }
               _carDal.Add(car);
 

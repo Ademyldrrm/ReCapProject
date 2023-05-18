@@ -5,6 +5,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -13,6 +14,7 @@ namespace Business.Concrete
 {
     public class BrandManager : IBrandService
     {
+
         IBrandDal _brandDal;
 
         public BrandManager(IBrandDal brandDal)
@@ -20,30 +22,30 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
-        public void Add(Brand brand)
+        public IResult Add(Brand brand)
         {
-            _brandDal.Add(brand);
-        
+            throw new NotImplementedException();
         }
 
-        public void Delete(Brand brand)
+        public IResult Delete(Brand brand)
         {
-            _brandDal.Delete(brand);
+            throw new NotImplementedException();
         }
 
-        public List<Brand> GetAll()
+        public IDataResult<List<Brand>> GetAll()
         {
-            return _brandDal.GetAll();
+            throw new NotImplementedException();
         }
 
-        public List<Brand> GetById(int id)
+        public IDataResult<List<Brand>> GetById(int id)
         {
-           return _brandDal.GetAll(b => b.BrandId == id);
+            throw new NotImplementedException();
         }
 
-        public void Update(Brand brand)
+        public IResult Update(Brand brand)
         {
-          _brandDal.Update(brand);
+            throw new NotImplementedException();
         }
     }
 }
+

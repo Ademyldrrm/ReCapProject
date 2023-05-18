@@ -86,3 +86,8 @@ C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Business
 C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Core.pdb
 C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\DataAccess.pdb
 C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Entities.pdb
+C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Autofac.dll
+C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Autofac.Extras.DynamicProxy.dll
+C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Castle.Core.dll
+C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\Autofac.Extensions.DependencyInjection.dll
+C:\Users\AdemYildirim\source\repos\ReCapProject\WepAPI\bin\Debug\net7.0\FluentValidation.dll
