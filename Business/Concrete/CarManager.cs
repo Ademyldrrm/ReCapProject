@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Contants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspect.Autofac.Validation;
+using Core.NewFolder.NewFolder;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -26,17 +28,10 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        //1:42 de kaldım
+        [ValidationAspect(typeof (CarValidator))]
         public IResult Add(Car car)
         {
-            var context =  new ValidationContext<Car>(car);
-            CarValidator carValidator=new CarValidator();
-            var result=carValidator.Validate(context);
-
-            if (!result.IsValid)
-            {
-                throw new FluentValidation.ValidationException(result.Errors);
-            }
+            
               _carDal.Add(car);
 
             return new SuccessResult(Messages.CarAdded);

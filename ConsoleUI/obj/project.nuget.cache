@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sJ4mmpIc9FSX71H7oWcKIwpM7WBgooMF6VJsJrxjESfHDXvVwgpkjBRbKihLqaIHXDNKJRR5mP6iBzVJoFwQxg==",
+  "dgSpecHash": "YUBurMjLtjwxMH/2AxsJngMZx5gL0fWDuSfQqzvG/z9PKKRgVB7XNGwbdlqmBtwPSnVoy7qbQusEhYfcX13PJw==",
   "success": true,
   "projectFilePath": "C:\\Users\\AdemYildirim\\source\\repos\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AdemYildirim\\.nuget\\packages\\autofac\\7.0.1\\autofac.7.0.1.nupkg.sha512",
+    "C:\\Users\\AdemYildirim\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\AdemYildirim\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.1\\autofac.extras.dynamicproxy.6.0.1.nupkg.sha512",
     "C:\\Users\\AdemYildirim\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\AdemYildirim\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
